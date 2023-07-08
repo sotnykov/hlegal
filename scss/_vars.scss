@@ -1,0 +1,82 @@
+$main: #323264;
+$alt: #46466e;
+$soft: #686887;
+$accent: #f0145a;
+$regular: #24a3ff;
+$hover: #0085ff;
+$active: #006ccf;
+$bg: #F5F5FA;
+$bg-alt: #ededf7;
+$text: #b3b3ba;
+$separator: #e6e6f0;
+$gradient: linear-gradient(to bottom right, #323264, #323264, #a54b5f);
+$soft-gradient: linear-gradient(to top right, #323264, #323264, #7a425e);
+$red: linear-gradient(to top left, #f0145a, #693264);
+$supersoft: linear-gradient(to bottom left, #323264, #323264, #643e72);
+$red-text: linear-gradient(to right, #f0145a, #ef8080);
+$red-textrev: linear-gradient(to left, #f0145a, #ef8080);
+
+%montserrat-400 {
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%montserrat-700 {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%btn {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+%title {
+  background: $red-text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+%dot {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  top: 7px;
+  left: -15px;
+  background-image: url('../images/dot.png');
+}
+
+%link {
+  position: relative;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $regular;
+  transition: all .3s;
+
+  &::after {
+    @extend %arrow;
+  }
+
+  &:hover {
+    color: $accent;
+
+    &::after {
+      transition: all .3s;
+      background-image: url('../images/arrow-accent.svg');
+    }
+  }
+}
+
+%arrow {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 2px;
+  right: -13px;
+  background-image: url('../images/arrow.svg');
+}
