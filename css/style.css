@@ -66,7 +66,7 @@ a {
   font-style: normal;
   font-display: swap;
 }
-.footer__rights-span, .footer__loc-text, .publications__text, .team__author-pos, .header__services-itemtext, .header__info-text, .header__logo-span, .header__list-add {
+.footer__rights-span, .footer__loc-text, .publications__text, .team__author-pos, .header__entry-desc, .header__entry-text, .header__services-itemtext, .header__info-text, .header__logo-span, .header__list-add {
   font-family: "Montserrat-Regular", sans-serif;
   font-weight: 400;
 }
@@ -82,7 +82,7 @@ body {
   outline: none;
 }
 
-.publications__title, .team__text, .header__services-title {
+.publications__title, .team__text, .header__entry-title, .header__services-title {
   background: linear-gradient(to right, #f0145a, #ef8080);
   -webkit-background-clip: text;
   background-clip: text;
@@ -221,10 +221,11 @@ body {
   content: "";
   width: 12px;
   height: 26px;
-  top: -2px;
+  top: 0px;
   left: 4px;
   background-image: url("../images/slash.png");
   background-position: center;
+  background-size: contain;
 }
 .header__toggle-btn {
   position: relative;
@@ -366,7 +367,7 @@ body {
   line-height: 30px;
   color: #fff;
 }
-.header__services::before {
+.header__entry::before, .header__services::before {
   content: "";
   position: absolute;
   width: calc(100% - 40px);
@@ -378,7 +379,7 @@ body {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
-.header__services::after {
+.header__entry::after, .header__services::after {
   content: "";
   position: absolute;
   width: calc(100% - 80px);
@@ -412,10 +413,73 @@ body {
   font-size: 22px;
   color: #24a3ff;
 }
+.header__services-itemlink:hover {
+  color: #f0145a;
+  transition: all 0.3s;
+}
 .header__services-itemtext {
   margin-top: 16px;
   line-height: 26px;
   color: #fff;
+}
+.header__entry {
+  padding-top: 30px;
+}
+.header__entry-top {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+}
+.header__entry-img {
+  margin: 0 auto 28px;
+}
+.header__entry-title {
+  margin-bottom: 28px;
+  font-size: 30px;
+}
+.header__entry-text {
+  margin-bottom: 24px;
+  font-size: 19px;
+  color: #fff;
+  line-height: 30px;
+}
+.header__entry-link {
+  padding: 18px 30px;
+  text-align: center;
+  color: #fff;
+  line-height: 56px;
+  background: #24a3ff;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+}
+.header__entry-listname {
+  margin-bottom: 30px;
+  font-size: 22px;
+  color: #fff;
+}
+.header__entry-listgroup {
+  margin-bottom: 32px;
+}
+.header__entry-item {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 14px;
+}
+.header__entry-item::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  top: 10px;
+  left: 0;
+  background-color: #f0145a;
+  border-radius: 50%;
+}
+.header__entry-desc {
+  font-size: 18px;
+  color: #fff;
+  line-height: 26px;
 }
 
 .team {
@@ -649,8 +713,18 @@ body {
     padding: 15px 35px 10px;
   }
   .header__top-logo {
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 46px;
+  }
+  .header__logo-span {
+    padding-left: 25px;
+    font-size: 24px;
+  }
+  .header__logo-span::before {
+    width: 14px;
+    height: 31px;
+    top: 0;
+    left: 5px;
   }
   .header__title {
     margin: 239px auto 329px;
@@ -879,8 +953,29 @@ body {
     margin-bottom: 0;
     width: 294px;
   }
+  .header__entry {
+    padding-top: 60px;
+  }
+  .header__entry-top {
+    padding-bottom: 60px;
+  }
+  .header__entry-img {
+    margin-bottom: 32px;
+  }
+  .header__entry-title {
+    font-size: 38px;
+  }
+  .header__entry-list {
+    display: flex;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+  }
+  .header__entry-listgroup {
+    margin-bottom: 44px;
+    width: calc(50% - 30px);
+  }
   .team {
-    margin-bottom: 74px;
+    margin-bottom: 78px;
   }
   .team__item {
     padding: 0 60px 30px;
@@ -1014,6 +1109,9 @@ body {
   .companies__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  .publications {
+    padding: 29px 0 30px;
+  }
   .publications__inner {
     flex-wrap: nowrap;
   }
@@ -1060,6 +1158,10 @@ body {
   .header__services-itemlink {
     width: 400px;
   }
+  .header__entry .wrapper {
+    margin: 0 auto;
+    max-width: 83%;
+  }
   .team__item-img {
     max-height: 350px;
   }
@@ -1105,6 +1207,10 @@ body {
   }
   .header__services-item:nth-child(2) .header__services-itemlink {
     width: 304px;
+  }
+  .header__entry .wrapper {
+    margin: 0 auto;
+    max-width: 71%;
   }
   .team__inner {
     margin: 0 auto;

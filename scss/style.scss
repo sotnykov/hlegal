@@ -31,6 +31,7 @@
 
   &-services {
     margin-bottom: 83px;
+
     &::after {
       display: none;
     }
@@ -119,10 +120,11 @@
       content: '';
       width: 12px;
       height: 26px;
-      top: -2px;
+      top: 0px;
       left: 4px;
       background-image: url('../images/slash.png');
       background-position: center;
+      background-size: contain;
     }
   }
 
@@ -300,6 +302,7 @@
     color: #fff;
   }
 
+  &__entry,
   &__services {
     &::before {
       content: '';
@@ -340,6 +343,7 @@
 
   &__services-item {
     margin-bottom: 30px;
+
     &:nth-child(5) {
       margin-bottom: 27px;
     }
@@ -357,6 +361,10 @@
     width: 304px;
     font-size: 22px;
     color: $regular;
+    &:hover {
+      color: $accent;
+      transition: all .3s;
+    }
   }
 
   &__services-itemtext {
@@ -364,6 +372,79 @@
     line-height: 26px;
     @extend %montserrat-400;
     color: #fff;
+  }
+
+  &__entry {
+    padding-top: 30px;
+  }
+
+  &__entry-top {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-bottom: 4px solid rgba(#fff, 0.5);
+  }
+
+  &__entry-img {
+    margin: 0 auto 28px;
+  }
+
+  &__entry-title {
+    margin-bottom: 28px;
+    font-size: 30px;
+    @extend %title;
+  }
+
+  &__entry-text {
+    margin-bottom: 24px;
+    font-size: 19px;
+    @extend %montserrat-400;
+    color: #fff;
+    line-height: 30px;
+  }
+
+  &__entry-link {
+    padding: 18px 30px;
+    text-align: center;
+    color: #fff;
+    line-height: 56px;
+    background: $regular;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.50);
+  }
+
+  &__entry-listname {
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #fff;
+  }
+
+  &__entry-listgroup {
+    margin-bottom: 32px;
+  }
+
+  &__entry-item {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 14px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 6px;
+      top: 10px;
+      left: 0;
+      background-color: $accent;
+      border-radius: 50%;
+    }
+  }
+
+  &__entry-desc {
+    font-size: 18px;
+    @extend %montserrat-400;
+    color: #fff;
+    line-height: 26px;
   }
 }
 
@@ -666,8 +747,20 @@
     }
 
     &__top-logo {
-      width: 100px;
-      height: auto;
+      width: auto;
+      height: 46px;
+    }
+
+    &__logo-span {
+      padding-left: 25px;
+      font-size: 24px;
+
+      &::before {
+        width: 14px;
+        height: 31px;
+        top: 0;
+        left: 5px;
+      }
     }
 
     &__title {
@@ -798,7 +891,7 @@
   .header {
     padding-bottom: 0;
     margin-bottom: 75px;
-    
+
     &-services {
       margin-bottom: 81px;
     }
@@ -829,6 +922,7 @@
     &__logo-span {
       padding-left: 30px;
       font-size: 36px;
+
       &::before {
         width: 21px;
         height: 47px;
@@ -974,11 +1068,36 @@
       margin-bottom: 0;
       width: 294px;
     }
+
+    &__entry {
+      padding-top: 60px;
+    }
+
+    &__entry-top {
+      padding-bottom: 60px;
+    }
+
+    &__entry-img {
+      margin-bottom: 32px;
+    }
+
+    &__entry-title {
+      font-size: 38px;
+    }
+
+    &__entry-list {
+      display: flex;
+      column-gap: 60px;
+    }
+
+    &__entry-listgroup {
+      margin-bottom: 44px;
+      width: calc(50% - 30px);
+    }
   }
 
   .team {
-
-    margin-bottom: 74px;
+    margin-bottom: 78px;
 
     &__item {
       padding: 0 60px 30px;
@@ -1160,6 +1279,8 @@
   }
 
   .publications {
+    padding: 29px 0 30px;
+
     &__inner {
       flex-wrap: nowrap;
     }
@@ -1223,6 +1344,11 @@
 
     &__services-itemlink {
       width: 400px;
+    }
+
+    &__entry .wrapper {
+      margin: 0 auto;
+      max-width: 83%;
     }
   }
 
@@ -1289,6 +1415,11 @@
 
     &__services-item:nth-child(2) .header__services-itemlink {
       width: 304px;
+    }
+
+    &__entry .wrapper {
+      margin: 0 auto;
+      max-width: 71%;
     }
   }
 
