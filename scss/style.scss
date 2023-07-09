@@ -10,7 +10,7 @@
 .header {
   position: relative;
   padding-bottom: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   background-image: $supersoft;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -29,13 +29,24 @@
     background-size: cover;
   }
 
+  &-services {
+    margin-bottom: 83px;
+    &::after {
+      display: none;
+    }
+  }
+
+  &__services-page {
+    margin-top: 29px;
+  }
+
   &__top {
     position: relative;
     z-index: 1000;
   }
 
   &__top-info {
-    padding: 10px 15px;
+    padding: 13px 15px;
     background-color: rgba(#fff, 0.2);
   }
 
@@ -74,12 +85,12 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #fff;
-  }
 
-  &__top-link--active {
-    padding: 5px 7px;
-    background: $accent;
-    border-radius: 7px;
+    &--active {
+      padding: 5px 7px;
+      background: $accent;
+      border-radius: 7px;
+    }
   }
 
   &__top-inner .wrapper {
@@ -90,8 +101,29 @@
   }
 
   &__top-logo {
-    width: 69px;
+    display: flex;
+    justify-content: center;
+    width: auto;
     height: 32px;
+  }
+
+  &__logo-span {
+    position: relative;
+    padding-left: 20px;
+    font-size: 20px;
+    @extend %montserrat-400;
+    color: #fff;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 26px;
+      top: -2px;
+      left: 4px;
+      background-image: url('../images/slash.png');
+      background-position: center;
+    }
   }
 
   &__toggle-btn {
@@ -268,8 +300,8 @@
     color: #fff;
   }
 
-  &__content {
-    &::after {
+  &__services {
+    &::before {
       content: '';
       position: absolute;
       width: calc(100% - 40px);
@@ -281,9 +313,7 @@
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
     }
-  }
 
-  &__services {
     &::after {
       content: '';
       position: absolute;
@@ -310,6 +340,9 @@
 
   &__services-item {
     margin-bottom: 30px;
+    &:nth-child(5) {
+      margin-bottom: 27px;
+    }
   }
 
   &__services-img {
@@ -336,7 +369,7 @@
 
 .team {
 
-  margin-bottom: 76px;
+  margin-bottom: 80px;
 
   &__item {
     display: flex !important;
@@ -344,7 +377,7 @@
   }
 
   &__item {
-    padding: 30px;
+    padding: 0 30px 30px;
   }
 
   &__item-img {
@@ -557,8 +590,12 @@
   background: $bg;
 
   &__container {
-    padding: 28px 0 20px;
+    padding: 29px 0 20px;
     border-top: 2px solid $separator;
+
+    &-services {
+      border-top: none;
+    }
   }
 
   &__inner {
@@ -760,6 +797,11 @@
 
   .header {
     padding-bottom: 0;
+    margin-bottom: 75px;
+    
+    &-services {
+      margin-bottom: 81px;
+    }
 
     &::after {
       height: 1030px;
@@ -780,7 +822,19 @@
     }
 
     &__top-logo {
-      width: 130px;
+      width: auto;
+      height: 60px;
+    }
+
+    &__logo-span {
+      padding-left: 30px;
+      font-size: 36px;
+      &::before {
+        width: 21px;
+        height: 47px;
+        top: 0;
+        left: 5px;
+      }
     }
 
     &__list {
@@ -827,7 +881,7 @@
     }
 
     &__top-inner .wrapper {
-      padding: 0 60px 30px;
+      padding: 0 60px 31px;
     }
 
     .menu {
@@ -841,6 +895,14 @@
 
       &__item {
         padding: 0;
+
+        &--active {
+          .menu__link {
+            padding-bottom: 3px;
+            color: $accent;
+            border-bottom: 2px solid $accent;
+          }
+        }
       }
 
       &__link {
@@ -891,13 +953,17 @@
       padding-bottom: 60px;
     }
 
+    &__services-page {
+      margin-top: 66px;
+    }
+
     &__services-title {
       margin: 10px 0 56px;
       line-height: 46.32px;
     }
 
     &__services-inner {
-      padding-bottom: 57px;
+      padding-bottom: 34px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -911,8 +977,11 @@
   }
 
   .team {
+
+    margin-bottom: 74px;
+
     &__item {
-      padding: 60px 60px 30px;
+      padding: 0 60px 30px;
     }
   }
 
@@ -1236,6 +1305,10 @@
   }
 
   .companies {
+    &-services {
+      margin-bottom: 60px;
+    }
+
     &__list {
       margin: 0 auto 60px;
       max-width: 1720px;

@@ -66,7 +66,7 @@ a {
   font-style: normal;
   font-display: swap;
 }
-.footer__rights-span, .footer__loc-text, .publications__text, .team__author-pos, .header__services-itemtext, .header__info-text, .header__list-add {
+.footer__rights-span, .footer__loc-text, .publications__text, .team__author-pos, .header__services-itemtext, .header__info-text, .header__logo-span, .header__list-add {
   font-family: "Montserrat-Regular", sans-serif;
   font-weight: 400;
 }
@@ -131,7 +131,7 @@ body {
 .header {
   position: relative;
   padding-bottom: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   background-image: linear-gradient(to bottom left, #323264, #323264, #643e72);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -148,12 +148,21 @@ body {
   background-position: 104%;
   background-size: cover;
 }
+.header-services {
+  margin-bottom: 83px;
+}
+.header-services::after {
+  display: none;
+}
+.header__services-page {
+  margin-top: 29px;
+}
 .header__top {
   position: relative;
   z-index: 1000;
 }
 .header__top-info {
-  padding: 10px 15px;
+  padding: 13px 15px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 .header__list {
@@ -196,8 +205,26 @@ body {
   align-items: center;
 }
 .header__top-logo {
-  width: 69px;
+  display: flex;
+  justify-content: center;
+  width: auto;
   height: 32px;
+}
+.header__logo-span {
+  position: relative;
+  padding-left: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+.header__logo-span::before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 26px;
+  top: -2px;
+  left: 4px;
+  background-image: url("../images/slash.png");
+  background-position: center;
 }
 .header__toggle-btn {
   position: relative;
@@ -339,7 +366,7 @@ body {
   line-height: 30px;
   color: #fff;
 }
-.header__content::after {
+.header__services::before {
   content: "";
   position: absolute;
   width: calc(100% - 40px);
@@ -370,6 +397,9 @@ body {
 .header__services-item {
   margin-bottom: 30px;
 }
+.header__services-item:nth-child(5) {
+  margin-bottom: 27px;
+}
 .header__services-img {
   margin-bottom: 30px;
   padding: 14px;
@@ -389,14 +419,14 @@ body {
 }
 
 .team {
-  margin-bottom: 76px;
+  margin-bottom: 80px;
 }
 .team__item {
   display: flex !important;
   flex-direction: column;
 }
 .team__item {
-  padding: 30px;
+  padding: 0 30px 30px;
 }
 .team__item-img {
   width: auto;
@@ -562,8 +592,11 @@ body {
   background: #F5F5FA;
 }
 .footer__container {
-  padding: 28px 0 20px;
+  padding: 29px 0 20px;
   border-top: 2px solid #e6e6f0;
+}
+.footer__container-services {
+  border-top: none;
 }
 .footer__inner {
   text-align: center;
@@ -710,6 +743,10 @@ body {
   }
   .header {
     padding-bottom: 0;
+    margin-bottom: 75px;
+  }
+  .header-services {
+    margin-bottom: 81px;
   }
   .header::after {
     height: 1030px;
@@ -727,7 +764,18 @@ body {
     background: transparent;
   }
   .header__top-logo {
-    width: 130px;
+    width: auto;
+    height: 60px;
+  }
+  .header__logo-span {
+    padding-left: 30px;
+    font-size: 36px;
+  }
+  .header__logo-span::before {
+    width: 21px;
+    height: 47px;
+    top: 0;
+    left: 5px;
   }
   .header__list {
     justify-content: start;
@@ -761,7 +809,7 @@ body {
     padding: 0;
   }
   .header__top-inner .wrapper {
-    padding: 0 60px 30px;
+    padding: 0 60px 31px;
   }
   .header .menu__list {
     display: flex;
@@ -771,6 +819,11 @@ body {
   }
   .header .menu__item {
     padding: 0;
+  }
+  .header .menu__item--active .menu__link {
+    padding-bottom: 3px;
+    color: #f0145a;
+    border-bottom: 2px solid #f0145a;
   }
   .header .menu__link {
     line-height: 19.5px;
@@ -808,12 +861,15 @@ body {
   .header__info-text {
     padding-bottom: 60px;
   }
+  .header__services-page {
+    margin-top: 66px;
+  }
   .header__services-title {
     margin: 10px 0 56px;
     line-height: 46.32px;
   }
   .header__services-inner {
-    padding-bottom: 57px;
+    padding-bottom: 34px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -823,8 +879,11 @@ body {
     margin-bottom: 0;
     width: 294px;
   }
+  .team {
+    margin-bottom: 74px;
+  }
   .team__item {
-    padding: 60px 60px 30px;
+    padding: 0 60px 30px;
   }
   .companies__list {
     grid-template-columns: 1fr 1fr 1fr;
@@ -1054,6 +1113,9 @@ body {
   .team__item {
     padding: 60px 0 30px;
     height: 390px;
+  }
+  .companies-services {
+    margin-bottom: 60px;
   }
   .companies__list {
     margin: 0 auto 60px;

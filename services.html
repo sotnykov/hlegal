@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hlegal</title>
+  <title>Services</title>
   <link rel="stylesheet" href="css/slick.css" type="text/css">
-  <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header-services">
     <div class="header__top">
       <div class="header__top-info">
         <ul class="header__list">
@@ -39,6 +38,7 @@
         <div class="wrapper">
           <a class="header__top-logo" href="#">
             <img class="header__logo-img" src="images/logo-white.png" alt="">
+            <span class="header__logo-span">services</span>
           </a>
           <button class="header__toggle-btn"></button>
         </div>
@@ -52,8 +52,8 @@
             <li class="menu__item">
               <a class="menu__link" href="#">about us</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="services.html">services</a>
+            <li class="menu__item menu__item--active">
+              <a class="menu__link" href="#">services</a>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#">team</a>
@@ -68,44 +68,11 @@
         </div>
       </nav>
     </div>
-    <div class="header__bottom">
+
+    <div class="header__services header__services-page">
       <div class="wrapper">
-        <h1 class="header__title">you legal solutions provider</h1>
-        <a class="header__scroll-btn" href="#content">
-          <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L10 10L19 1" stroke="white" stroke-width="2" />
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="header__content" id="content">
-      <div class="wrapper">
-        <div class="header__info">
-          <div class="header__info-buttons">
-            <button class="header__info-button header__info-button--active">Consistent</button>
-            <button class="header__info-button">Customer oriented</button>
-            <button class="header__info-button">Innovative</button>
-            <button class="header__info-button">Business oriented</button>
-          </div>
-          <div class="header__info-right">
-            <div class="header__info-item">
-              <p class="header__info-title">We turn the idea of legal services</p>
-              <p class="header__info-text">
-                Consolidating many years of experience and practice, the company's lawyers accompany complex projects
-                and
-                achieve a number of important decisions for the industry. Many of them form the practice of applying the
-                law of the sea in Ukraine.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="header__services">
-      <div class="wrapper">
-        <a class="header__services-link" href="#">Services</a>
         <h2 class="header__services-title">What can we do better than others?</h2>
-        <div class="header__services-inner">
+        <div class="header__services-inner ">
           <div class="header__services-item">
             <img class="header__services-img" src="images/services-ecom.svg" alt="e-commerce image">
             <a class="header__services-itemlink" href="#">IT and e-commerce</a>
@@ -169,50 +136,7 @@
   </header>
 
   <main class="main">
-    <div class="team">
-      <div class="team__inner">
-        <div class="team__item">
-          <div class="team__item-img">
-            <img class="team__img" src="images/team/alex.jpg" alt="author image">
-          </div>
-          <div class="team__box">
-            <a class="team__link" href="#">команда</a>
-            <p class="team__text">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
-              допомогу,
-              навіть у ситуаціях, коли більшість безсилі.</p>
-            <span class="team__author">Олександр Олександровський</span>
-            <span class="team__author-pos">Керуючий партнер</span>
-          </div>
-        </div>
-        <div class="team__item">
-          <div class="team__item-img">
-            <img class="team__img" src="images/team/serg.jpg" alt="author image">
-          </div>
-          <div class="team__box">
-            <a class="team__link" href="#">команда</a>
-            <p class="team__text">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
-              допомогу,
-              навіть у ситуаціях, коли більшість безсилі.</p>
-            <span class="team__author">Sergey Binn</span>
-            <span class="team__author-pos">Associate</span>
-          </div>
-        </div>
-        <div class="team__item">
-          <div class="team__item-img">
-            <img class="team__img" src="images/team/oks.jpg" alt="author image">
-          </div>
-          <div class="team__box">
-            <a class="team__link" href="#">команда</a>
-            <p class="team__text">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
-              допомогу,
-              навіть у ситуаціях, коли більшість безсилі.</p>
-            <span class="team__author">Oksana Kobzar</span>
-            <span class="team__author-pos">Equity partner, Attorney-at-law</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="companies">
+    <div class="companies companies-services">
       <p class="companies__title">They already trust us</p>
       <ul class="companies__list">
         <li class="companies__item">
@@ -277,65 +201,11 @@
         </li>
       </ul>
     </div>
-    <div class="publications">
-      <div class="wrapper">
-        <a class="publications__link" href="#">Publications</a>
-        <h2 class="publications__title">We have something to tell</h2>
-        <div class="publications__inner">
-          <div class="publications__item">
-            <div class="publications__item-img">
-              <img class="publications__img" src="images/publication-1.jpg" alt="publication image">
-            </div>
-            <div class="publications__box">
-              <a class="publications__item-title" href="#">Equity associate</a>
-              <span class="publications__date">April 22</span>
-              <div class="publications__text">
-                I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told
-                me
-                that if I…
-              </div>
-            </div>
-          </div>
-          <div class="publications__item">
-            <div class="publications__item-img">
-              <img class="publications__img" src="images/publication-2.jpg" alt="publication image">
-            </div>
-            <div class="publications__box">
-              <a class="publications__item-title" href="#">Penalty for the Good Corporation: what will happen to
-                Google
-                and
-                others for violating the GDPR</a>
-              <span class="publications__date">September 29</span>
-              <div class="publications__text">
-                And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21
-                National
-                Commission for Data Protection.
-              </div>
-            </div>
-          </div>
-          <div class="publications__item">
-            <div class="publications__item-img">
-              <img class="publications__img" src="images/publication-3.jpg" alt="publication image">
-            </div>
-            <div class="publications__box">
-              <a class="publications__item-title" href="#">Millennial Testament</a>
-              <span class="publications__date">August 19</span>
-              <div class="publications__text">
-                What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of
-                the
-                Ukrainian
-                generation X looks like this: an apartment in…
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </main>
 
   <footer class="footer">
     <div class="wrapper">
-      <div class="footer__container">
+      <div class="footer__container footer__container-services">
         <div class="footer__inner">
           <ul class="footer__loc">
             <li class="footer__loc-item">
@@ -366,8 +236,8 @@
     </div>
   </footer>
 
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
